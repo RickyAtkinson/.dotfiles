@@ -19,10 +19,6 @@ vim.opt.title = true -- Set the terminal title to the current buffer name
 -- Spell check
 vim.opt.spelllang = 'en_us'
 
--- Undercurl
-vim.cmd([[let &t_Cs = '\e[4:3m']])
-vim.cmd([[let &t_Ce = '\e[4:0m']])
-
 -- Search
 vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case sensitive if contains /C or uppercase letters
