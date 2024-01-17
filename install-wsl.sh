@@ -74,11 +74,13 @@ sudo mount /home/$USER/.ssh
 # Version of neovim in default repos is too old
 echo_info "Adding neovim-ppa/unstable repository..."
 sudo apt-add-repository ppa:neovim-ppa/unstable
+sudo apt update
 
 # Some software is already installed but mark it as "user installed"
 echo_info "Installing software..."
 sudo apt -y install \
   ansible \
+  apt-transport-https \
   bat \
   btop \
   build-essential \
@@ -105,6 +107,7 @@ sudo apt -y install \
   python3 \
   python3-pip \
   ripgrep \
+  software-properties-common \
   tar \
   texlive-full \
   tldr \
@@ -118,6 +121,14 @@ sudo apt -y install \
 sudo snap install \
   diff-so-fancy \
   fx
+
+# Install PowerShell
+source /etc/os-release
+wget -q https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt-get update
+sudo apt-get install -y powershell
 
 echo_info "Configuring git..."
 git config --global user.name "$git_name"
