@@ -106,6 +106,7 @@ sudo apt -y install \
   python-is-python3 \
   python3 \
   python3-pip \
+  python3-venv \
   ripgrep \
   software-properties-common \
   tar \
