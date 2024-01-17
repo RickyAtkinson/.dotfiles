@@ -1,0 +1,78 @@
+{
+    "workbench.startupEditor": "none",
+    "telemetry.telemetryLevel": "off",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'MesloLGS Nerd Font', Consolas, 'Courier New', monospace",
+    "files.eol": "\n",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "editor.linkedEditing": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.minimap.enabled": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "prettier.requireConfig": true,
+    "[go]": {
+      "editor.tabSize": 4
+    },
+    "[php]": {
+      "editor.tabSize": 4
+    },
+    "[powershell]": {
+      "editor.tabSize": 4
+    },
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    "powershell.integratedConsole.showOnStartup": false,
+    "markdown.extension.orderedList.marker": "one",
+    "markdown.extension.print.theme": "dark",
+    "cSpell.userWords": [
+        "Ableton",
+        "APPDATA",
+        "astro",
+        "autocmd",
+        "Balena",
+        "Consolas",
+        "Cortana",
+        "Creality",
+        "Cura",
+        "degit",
+        "dotfile",
+        "dotfiles",
+        "eisvogel",
+        "gcode",
+        "gopls",
+        "hipatterns",
+        "hotend",
+        "Inkscape",
+        "keybinds",
+        "Laravel",
+        "Logi",
+        "Meslo",
+        "neofetch",
+        "neovim",
+        "Nord",
+        "NTFS",
+        "Nuxt",
+        "nvim",
+        "ollama",
+        "pandoc",
+        "redistributable",
+        "ripgrep",
+        "sessionizer",
+        "stylua",
+        "Syncthing",
+        "tldr",
+        "UEFI",
+        "Ulti",
+        "undercurl",
+        "USERPROFILE",
+        "webui",
+        "winget",
+        "zoxide"
+    ],
+    "editor.codeActionsOnSave": {
+    }
+}

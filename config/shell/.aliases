@@ -1,0 +1,40 @@
+# .aliases
+
+# Navigation
+alias ~="cd ~"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias projects="cd ~/projects"
+alias personal="cd ~/projects/personal"
+alias work="cd ~/projects/work"
+alias tools="cd ~/projects/tools"
+alias sandbox="cd ~/projects/sandbox"
+alias tutorials="cd ~/projects/tutorials"
+alias notes="cd ~/documents/.notes"
+alias dotfiles="cd ~/.dotfiles"
+
+# git
+alias g="git"
+alias ga="git add"
+alias gaa="git add ."
+alias gco="git checkout"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gfet="git fetch"
+alias gp="git push"
+alias gl="git pull"
+alias gm="git merge"
+
+# Color
+alias grep="grep --color=auto"
+alias ls="ls --color=auto"
+alias ll="ls --color=auto -alh"
+
+alias bat="batcat"
+
+# lynx search scripts
+alias wiki="wikipedia"
+alias ddg="duckduckgo"
+
+alias pipes="pipes.sh"
