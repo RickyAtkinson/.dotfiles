@@ -64,8 +64,9 @@ scoop bucket add nerd-fonts
 
 Write-HostInfo "Installing Scoop packages..."
 # Install aria2 first so scoop can use it for future downloads
-scoop install aria2
-scoop config aria2-warning-enabled false
+# TODO: aria2 causes errors during setup - remove for now.
+# scoop install aria2
+# scoop config aria2-warning-enabled false
 
 scoop install `
     bat `
