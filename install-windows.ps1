@@ -17,22 +17,6 @@ if ($PSVersionTable.PSEdition -ne "Core")
     exit
 }
 
-$gitExists = ![string]::IsNullOrEmpty( `
-    $(Get-Command -Name git -ErrorAction SilentlyContinue))
-if ($gitExists)
-{
-    Write-HostError "Git for Windows needs to be installed. Exiting."
-    exit
-}
-
-$gitExists = ![string]::IsNullOrEmpty( `
-    $(Get-Command -Name code -ErrorAction SilentlyContinue))
-if ($gitExists)
-{
-    Write-HostError "VS Code needs to be installed. Exiting."
-    exit
-}
-
 Write-HostInfo "Configuring git..."
 $inputLoop = $true
 while ($inputLoop)
