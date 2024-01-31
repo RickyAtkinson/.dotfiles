@@ -115,12 +115,12 @@ Set-Alias -Name g -Value git
 Set-Alias -Name ga -Value Invoke-GitAdd
 Set-Alias -Name gaa -Value Invoke-GitAddAll
 Set-Alias -Name gco -Value Invoke-GitCheckout
-Set-Alias -Name gc -Value Invoke-GitCommit
-Set-Alias -Name gcm -Value Invoke-GitCommitMsg
+Set-Alias -Name gc -Value Invoke-GitCommit -Force
+Set-Alias -Name gcm -Value Invoke-GitCommitMsg -Force
 Set-Alias -Name gfet -Value Invoke-GitFetch
-Set-Alias -Name gp -Value Invoke-GitPush
-Set-Alias -Name gl -Value Invoke-GitPull
-Set-Alias -Name gm -Value Invoke-GitMerge
+Set-Alias -Name gp -Value Invoke-GitPush -Force
+Set-Alias -Name gl -Value Invoke-GitPull -Force
+Set-Alias -Name gm -Value Invoke-GitMerge -Force
 Set-Alias -Name htop -Value ntop
 Set-Alias -Name ll -Value ls
 Set-Alias -Name notes -Value Set-LocationNotes
