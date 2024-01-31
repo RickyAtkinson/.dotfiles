@@ -165,6 +165,6 @@ Move-Item -Path "$Env:USERPROFILE\Downloads\$eisvogelFolderName\eisvogel.latex" 
 Remove-Item -Recurse $Env:USERPROFILE\Downloads\$eisvogelFolderName
 Remove-Item -Recurse $Env:USERPROFILE\Downloads\$eisvogelFolderName.zip
 
-Write-HostInfo "To be able to use the scripts installed during setup from the command line, you will need to add ``" + $Env:LOCALAPPDATA + "\Scripts`` to your PATH. This can be done easily with Windows PowerToys, which was installed during setup."
+Write-HostInfo "To be able to use the scripts installed during setup from the command line, you will need to add ``$Env:LOCALAPPDATA\Scripts`` to your PATH. This can be done easily with Windows PowerToys, which was installed during setup."
 
 Write-HostSuccess "Windows Setup is complete! Reload your terminal to complete."
