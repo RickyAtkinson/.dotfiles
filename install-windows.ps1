@@ -70,8 +70,7 @@ scoop config aria2-warning-enabled false
 scoop install `
     bat `
     btop `
-    ca-certificates `
-    cat `
+    cacert `
     composer `
     diff-so-fancy `
     dos2unix `
