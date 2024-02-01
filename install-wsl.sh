@@ -9,7 +9,7 @@ working_dir=$(pwd)
 # Get the version number for the latest release of a github repo given
 get_latest_github_release_number() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" |
-    grep '"tag_name":' |         # Get tag line
+    grep '"tag_name":' | # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/' # Pluck JSON value
 }
 
