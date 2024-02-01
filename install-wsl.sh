@@ -59,18 +59,6 @@ mkdir -p ~/projects/library
 mkdir -p ~/.local/share/bash # Needed so curl download doesn't fail
 mkdir -p ~/.cache/zsh        # Needed so zsh can create history file
 
-echo_info "Mounting .ssh folder..."
-mkdir -m 700 ~/.ssh
-# Get Windows user name for file path
-cd /mnt/c/ # Switch to Windows drive to avoid errors
-win_user=$(cmd.exe /c "echo %USERNAME%" | tr -d "\r")
-cd "$working_dir"
-# Add a permanent fstab entry for Windows user .ssh directory and mount
-cat <<EOF | sudo tee -a /etc/fstab
-C:\Users\\$win_user\.ssh\ /home/$USER/.ssh drvfs rw,noatime,uid=$(id -u),gid=$(id -g),case=off,umask=0077,fmask=0177 0 0
-EOF
-sudo mount /home/$USER/.ssh
-
 # Version of neovim in default repos is too old
 echo_info "Adding neovim-ppa/unstable repository..."
 sudo apt-add-repository ppa:neovim-ppa/unstable
