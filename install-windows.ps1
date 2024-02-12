@@ -81,6 +81,7 @@ scoop install `
     fx `
     fzf `
     gawk `
+    gcc `
     go `
     graphicsmagick `
     grep `
