@@ -29,3 +29,18 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,"
 if _G.IS_WINDOWS then
   vim.cmd("autocmd VimLeave * set guicursor=a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor")
 end
+
+-- Set a clipboard provider in WSL
+if _G.IS_WSL then
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace('\r', ''))",
+      ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace('\r', ''))",
+    },
+  }
+end
