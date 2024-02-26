@@ -2,7 +2,6 @@ return {
   -- Quick switching between files
   {
     "ThePrimeagen/harpoon",
-    requires = { { "nvim-lua/plenary.nvim" } },
     keys = {
       {
         "<leader>hh",
