@@ -159,21 +159,47 @@ return {
     optional = true,
     opts = {
       formatters_by_ft = {
+        ["javascript"] = { "dprint", { "prettierd", "prettier" } },
+        ["javascriptreact"] = { "dprint", { "prettierd", "prettier" } },
+        ["typescript"] = { "dprint", { "prettierd", "prettier" } },
+        ["typescriptreact"] = { "dprint", { "prettierd", "prettier" } },
+        ["vue"] = { { "prettierd", "prettier" } },
+        ["css"] = { { "prettierd", "prettier" } },
+        ["scss"] = { { "prettierd", "prettier" } },
+        ["less"] = { { "prettierd", "prettier" } },
+        ["html"] = { { "prettierd", "prettier" } },
+        ["json"] = { { "prettierd", "prettier" } },
+        ["jsonc"] = { { "prettierd", "prettier" } },
+        ["yaml"] = { { "prettierd", "prettier" } },
         ["markdown"] = { { "prettierd", "prettier" } },
         ["markdown.mdx"] = { { "prettierd", "prettier" } },
-        ["javascript"] = { "dprint", "prettierd", "prettier" },
-        ["javascriptreact"] = { "dprint", "prettierd", "prettier" },
-        ["typescript"] = { "dprint", "prettierd", "prettier" },
-        ["typescriptreact"] = { "dprint", "prettierd", "prettier" },
+        ["graphql"] = { { "prettierd", "prettier" } },
+        ["handlebars"] = { { "prettierd", "prettier" } },
       },
       formatters = {
-        shfmt = {
-          prepend_args = { "-i", "2", "-ci" },
+        prettier = {
+          condition = function(self, ctx)
+            return vim.fs.find(
+              { ".prettierrc", ".prettierrc.js", "prettier.config.js" },
+              { path = ctx.filename, upward = true }
+            )[1]
+          end,
+        },
+        prettierd = {
+          condition = function(self, ctx)
+            return vim.fs.find(
+              { ".prettierrc", ".prettierrc.js", "prettier.config.js" },
+              { path = ctx.filename, upward = true }
+            )[1]
+          end,
         },
         dprint = {
           condition = function(self, ctx)
             return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
           end,
+        },
+        shfmt = {
+          prepend_args = { "-i", "2", "-ci" },
         },
       },
     },
@@ -184,7 +210,6 @@ return {
     opts = {
       linters_by_ft = {
         lua = { "selene", "luacheck" },
-        markdown = { "markdownlint" },
       },
       linters = {
         selene = {
