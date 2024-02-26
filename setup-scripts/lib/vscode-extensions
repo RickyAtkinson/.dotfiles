@@ -9,6 +9,7 @@ golang.go
 sumneko.lua
 ms-vscode.powershell
 yzhang.markdown-all-in-one
+davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 esbenp.prettier-vscode
 ms-vscode-remote.remote-wsl
