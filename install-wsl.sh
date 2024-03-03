@@ -172,7 +172,17 @@ echo_info "Installing dotfiles..."
 ./setup-scripts/tmux.sh
 ./setup-scripts/neovim.sh
 
-echo_info "Installing third part source code..."
+echo_info "Installing third party source code..."
+
+echo_info "Installing lazygit..."
+cd ~/downloads || exit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
+rm lazygit.tar.gz lazygit
+cd "$working_dir" || exit
+
 echo_info "Installing pipes.sh..."
 cd ~/projects/library/pipes.sh || exit
 make PREFIX="$HOME/.local/" install
