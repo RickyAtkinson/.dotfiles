@@ -9,7 +9,7 @@ working_dir=$(pwd)
 # Get the version number for the latest release of a github repo given
 get_latest_github_release_number() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" |
-    grep '"tag_name":' | # Get tag line
+    grep '"tag_name":' |         # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/' # Pluck JSON value
 }
 
@@ -23,13 +23,13 @@ fi
 echo_info "Gathering required data..."
 continue=true
 while $continue; do
-  read -p "Enter you git user.name: " git_name
-  read -p "Enter you git user.email: " git_email
+  read -rp "Enter you git user.name: " git_name
+  read -rp "Enter you git user.email: " git_email
 
   echo -e "\ngit name: $git_name"
   echo -e "git email: $git_email\n"
 
-  read -p "Is that correct? (y/N): " git_confirm
+  read -rp "Is that correct? (y/N): " git_confirm
 
   git_confirm=$(echo "$git_confirm" | tr "[:upper:]" "[:lower:]")
   if [ "$git_confirm" = "y" ] || [ "$git_confirm" = "yes" ]; then
@@ -174,21 +174,21 @@ echo_info "Installing dotfiles..."
 
 echo_info "Installing third part source code..."
 echo_info "Installing pipes.sh..."
-cd ~/projects/library/pipes.sh
-make PREFIX=$HOME/.local/ install
-cd $working_dir
+cd ~/projects/library/pipes.sh || exit
+make PREFIX="$HOME/.local/" install
+cd "$working_dir" || exit
 
 echo_info "Downloading Eisvogel latex theme..."
 eisvogel_version=$(get_latest_github_release_number "Wandmalfarbe/pandoc-latex-template")
 eisvogel_folder_name="Eisvogel-$eisvogel_version"
-wget https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/$eisvogel_version/$eisvogel_folder_name.tar.gz \
-  -O ~/downloads/$eisvogel_folder_name.tar.gz
-mkdir ~/downloads/$eisvogel_folder_name
-tar -xzf ~/downloads/$eisvogel_folder_name.tar.gz -C ~/downloads/$eisvogel_folder_name
-sudo mv ~/downloads/$eisvogel_folder_name/eisvogel.latex /usr/share/pandoc/data/templates/eisvogel.latex
-rm -r ~/downloads/$eisvogel_folder_name ~/downloads/$eisvogel_folder_name.tar.gz
+wget "https://github.com/Wandmalfarbe/pandoc-latex-template/releases/download/$eisvogel_version/$eisvogel_folder_name.tar.gz" \
+  -O "$HOME/downloads/$eisvogel_folder_name.tar.gz"
+mkdir "$HOME/downloads/$eisvogel_folder_name"
+tar -xzf "$HOME/downloads/$eisvogel_folder_name.tar.gz" -C "$HOME/downloads/$eisvogel_folder_name"
+sudo mv "$HOME/downloads/$eisvogel_folder_name/eisvogel.latex" "/usr/share/pandoc/data/templates/eisvogel.latex"
+rm -r "$HOME/downloads/$eisvogel_folder_name" "$HOME/downloads/$eisvogel_folder_name.tar.gz"
 
 echo_info "Setting default shell to zsh..."
-chsh -s $(which zsh)
+chsh -s "$(which zsh)"
 
 echo_success "WSL setup is complete! Reload your terminal to complete."

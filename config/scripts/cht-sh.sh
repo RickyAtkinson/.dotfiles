@@ -4,14 +4,14 @@
 
 pgrep_tmux_output=$(pgrep tmux)
 
-selected=$(cat ~/.local/scripts/lib/cht-sh-languages ~/.local/scripts/lib/cht-sh-commands | fzf)
+selected=$(cat ~/.dotfiles/config/scripts/lib/cht-sh-languages ~/.dotfiles/config/scripts/lib/cht-sh-commands | fzf)
 
 if [[ -z $selected ]]; then
   exit 0
 fi
 
-read -p "Query: " query
-query=$(echo $query | tr ' ' '+')
+read -rp "Query: " query
+query=$(echo "$query" | tr " " "+")
 
 if [[ -z $pgrep_tmux_output ]]; then
   cmd_prefix="curl --silent cht.sh/"
