@@ -11,12 +11,12 @@ alias work="cd ~/projects/work"
 alias tools="cd ~/projects/tools"
 alias sandbox="cd ~/projects/sandbox"
 alias tutorials="cd ~/projects/tutorials"
+alias notes="cd ~/documents/.notes"
+alias dotfiles="cd ~/.dotfiles"
 
-# Nvim quick links
-alias notes="nvim ~/documents/.notes"
+# nvim quick links
 alias notebook="nvim ~/documents/.notes/notebook.md"
 alias todo="nvim ~/documents/.notes/TODO.md"
-alias dotfiles="nvim ~/.dotfiles"
 
 # git
 alias g="git"
