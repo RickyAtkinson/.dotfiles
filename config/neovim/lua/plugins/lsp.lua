@@ -177,22 +177,6 @@ return {
         ["handlebars"] = { { "prettierd", "prettier" } },
       },
       formatters = {
-        prettier = {
-          condition = function(self, ctx)
-            return vim.fs.find(
-              { ".prettierrc", ".prettierrc.js", "prettier.config.js" },
-              { path = ctx.filename, upward = true }
-            )[1]
-          end,
-        },
-        prettierd = {
-          condition = function(self, ctx)
-            return vim.fs.find(
-              { ".prettierrc", ".prettierrc.js", "prettier.config.js" },
-              { path = ctx.filename, upward = true }
-            )[1]
-          end,
-        },
         dprint = {
           condition = function(self, ctx)
             return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
