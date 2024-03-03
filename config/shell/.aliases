@@ -11,7 +11,10 @@ alias work="cd ~/projects/work"
 alias tools="cd ~/projects/tools"
 alias sandbox="cd ~/projects/sandbox"
 alias tutorials="cd ~/projects/tutorials"
+
 alias notes="cd ~/documents/.notes"
+alias notebook="cd ~/documents/.notes/notebook.md"
+alias todo="cd ~/documents/.notes/TODO.md"
 alias dotfiles="cd ~/.dotfiles"
 
 # git
