@@ -53,10 +53,6 @@ function Set-LocationTutorials
 {
     Set-Location $Env:USERPROFILE\Projects\Tutorials 
 }
-function Set-LocationNotes
-{
-    Set-Location $Env:USERPROFILE\Documents\.notes 
-}
 function Set-LocationDotfiles
 {
     Set-Location $Env:USERPROFILE\.dotifles 
@@ -123,7 +119,6 @@ Set-Alias -Name gl -Value Invoke-GitPull -Force
 Set-Alias -Name gm -Value Invoke-GitMerge -Force
 Set-Alias -Name htop -Value ntop
 Set-Alias -Name ll -Value ls
-Set-Alias -Name notes -Value Set-LocationNotes
 Set-Alias -Name projects -Value Set-LocationProjects
 Set-Alias -Name tig -Value "C:\Program Files\Git\usr\bin\tig.exe"
 Set-Alias -Name work -Value Set-LocationWork

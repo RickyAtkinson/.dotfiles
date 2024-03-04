@@ -140,9 +140,6 @@ ForEach ($extension in $extensions)
     code --install-extension $extension
 }
 
-Write-HostInfo "Getting git repos..."
-git clone git@github.com:RickyAtkinson/.notes.git $Env:USERPROFILE\Documents\.notes
-
 Write-HostInfo "Installing dotfiles..."
 .\setup-scripts\neovim.ps1
 .\setup-scripts\php.ps1
