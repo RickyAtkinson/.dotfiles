@@ -9,8 +9,8 @@ if [[ $# -eq 1 ]]; then
 else
   selected=$({
     find ~/projects/*/ -mindepth 1 -maxdepth 1 -type d
-    find ~ -name .dotfiles
-    find ~/documents -name .notes
+    find ~ -mindepth 1 -maxdepth 1 -type d -name .dotfiles
+    find ~/documents -mindepth 1 -maxdepth 1 -type d -name .notes
   } | fzf)
 fi
 
