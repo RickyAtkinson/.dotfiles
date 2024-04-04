@@ -10,10 +10,6 @@ local keymap = vim.keymap
 keymap.set("v", "<M-j>", ":m '>+1<CR>gv=gv")
 keymap.set("v", "<M-k>", ":m '<-2<CR>gv=gv")
 
--- When using half page jumps keep the cursor in the center of the screen
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
-
 -- Keep search terms in the center of the screen when cycling through them
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
