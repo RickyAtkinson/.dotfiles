@@ -107,6 +107,7 @@ Set-Alias -Name cat -Value "C:\Program Files\Git\usr\bin\cat.exe"
 Set-Alias -Name cheatsh -Value cht-sh.ps1
 Set-Alias -Name cht-sh -Value cht-sh.ps1
 Set-Alias -Name chtsh -Value cht-sh.ps1
+Set-Alias -Name dotfiles -Value Set-LocationDotfiles
 Set-Alias -Name g -Value git
 Set-Alias -Name ga -Value Invoke-GitAdd
 Set-Alias -Name gaa -Value Invoke-GitAddAll
