@@ -96,6 +96,8 @@ sudo apt -y install \
   python3-pip \
   python3-venv \
   ripgrep \
+  ruby-full \
+  ruby-dev \
   software-properties-common \
   tar \
   texlive-full \
@@ -152,7 +154,7 @@ volta install yarn
 volta install pnpm
 
 echo_info "Installing global node packages..."
-npm install -g degit tree-sitter-cli
+npm install -g degit tree-sitter-cli @shopify/cli @shopify/theme
 
 echo_info "Installing pyvim for Neovim Python support..."
 python3 -m pip install --user --upgrade pynvim
