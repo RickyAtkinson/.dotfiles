@@ -91,6 +91,7 @@ scoop install `
     lua `
     luajit `
     luarocks `
+    msys2 `
     neofetch `
     neovim `
     nerd-fonts/Meslo-NF `
@@ -100,6 +101,7 @@ scoop install `
     php81 `
     python `
     ripgrep `
+    ruby `
     sed `
     sudo `
     tar `
@@ -114,6 +116,9 @@ scoop install `
 Write-HostInfo "Setting default PHP version to latest..."
 scoop reset php
 
+Write-HostInfo "Installing Ruby development tools (Select MSYS2 and MINGW tools when prompted)..."
+ridk install
+
 Write-HostInfo "Installing Node and package managers..."
 $Env:VOLTA_FEATURE_PNPM = 1
 volta install node
@@ -121,7 +126,7 @@ volta install yarn
 volta install pnpm
 
 Write-Host "Installing global node packages..."
-npm install -g degit tree-sitter-cli
+npm install -g degit tree-sitter-cli @shopify/cli @shopify/theme
 
 Write-HostInfo "Installing pyvim for Neovim Python support..."
 python3 -m pip install --user --upgrade pynvim
