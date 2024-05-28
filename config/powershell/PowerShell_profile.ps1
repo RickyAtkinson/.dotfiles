@@ -55,7 +55,7 @@ function Set-LocationTutorials
 }
 function Set-LocationDotfiles
 {
-    Set-Location $Env:USERPROFILE\.dotifles 
+    Set-Location $Env:USERPROFILE\.dotfiles 
 }
 function Invoke-Artisan
 {
