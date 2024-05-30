@@ -11,6 +11,8 @@ export GOPATH="$HOME/go"
 export VOLTA_HOME="$HOME/.volta"
 export VOLTA_FEATURE_PNPM=1
 
+export SHOPIFY_CLI_NO_ANALYTICS=1
+
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!{node_modules,.git}'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 

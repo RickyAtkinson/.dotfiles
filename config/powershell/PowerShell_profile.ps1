@@ -5,6 +5,8 @@
 $Env:EDITOR = "nvim"
 $Env:VISUAL = "code"
 
+$Env:SHOPIFY_CLI_NO_ANALYTICS = 1
+
 # volta tab-completions
 (& volta completions powershell) | Out-String | Invoke-Expression
 
