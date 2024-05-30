@@ -126,11 +126,14 @@ volta install node
 volta install yarn
 volta install pnpm
 
-Write-Host "Installing global node packages..."
-npm install -g degit tree-sitter-cli @shopify/cli @shopify/theme
+Write-HostInfo "Installing global node packages..."
+npm install -g degit eslint eslint_d prettier @fsouza/prettierd tree-sitter-cli @shopify/cli @shopify/theme
 
 Write-HostInfo "Installing pyvim for Neovim Python support..."
 python3 -m pip install --user --upgrade pynvim
+
+Write-HostInfo "Installing Ruby Gems..."
+gem install bundler
 
 Write-HostInfo "Installing gopls..."
 go install -v golang.org/x/tools/gopls@latest

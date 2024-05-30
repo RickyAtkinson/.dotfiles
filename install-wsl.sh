@@ -155,10 +155,13 @@ volta install yarn
 volta install pnpm
 
 echo_info "Installing global node packages..."
-npm install -g degit tree-sitter-cli @shopify/cli @shopify/theme
+npm install -g degit eslint eslint_d prettier @fsouza/prettierd tree-sitter-cli @shopify/cli @shopify/theme
 
 echo_info "Installing pyvim for Neovim Python support..."
 python3 -m pip install --user --upgrade pynvim
+
+echo_info "Installing Ruby Gems..."
+gem install --user-install bundler
 
 echo_info "Installing gopls..."
 go install -v golang.org/x/tools/gopls@latest
