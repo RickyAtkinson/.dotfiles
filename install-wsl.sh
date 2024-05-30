@@ -55,6 +55,7 @@ mkdir -p ~/projects/sandbox
 mkdir -p ~/projects/tools
 mkdir -p ~/projects/tutorials
 mkdir -p ~/projects/work
+mkdir -p ~/projects/shopify
 mkdir -p ~/projects/library
 mkdir -p ~/.local/share/bash # Needed so curl download doesn't fail
 mkdir -p ~/.cache/zsh        # Needed so zsh can create history file

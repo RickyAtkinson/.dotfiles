@@ -47,6 +47,7 @@ New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Sandbox" -Force
 New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Tools" -Force
 New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Tutorials" -Force
 New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Work" -Force
+New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Shopify" -Force
 New-Item -ItemType "directory" -Path "$Env:USERPROFILE\Projects\Library" -Force
 
 Write-HostInfo "Installing Winget packages..."
