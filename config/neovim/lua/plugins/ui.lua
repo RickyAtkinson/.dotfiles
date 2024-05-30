@@ -69,8 +69,6 @@ return {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 5000,
-      -- Need to set the BG because the VS Code colorscheme doesn't support notify yet
-      background_colour = "#1E1E1E",
     },
   },
 

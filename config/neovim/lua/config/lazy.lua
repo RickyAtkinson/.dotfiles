@@ -12,9 +12,6 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "vscode",
-      },
     },
     -- Import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
