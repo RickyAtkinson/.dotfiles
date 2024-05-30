@@ -74,5 +74,8 @@
     "winget",
     "zoxide"
   ],
-  "editor.codeActionsOnSave": {}
+  "editor.codeActionsOnSave": {},
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }
