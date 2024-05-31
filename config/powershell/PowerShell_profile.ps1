@@ -99,6 +99,11 @@ function Invoke-GitMerge
 {
     git merge $Args 
 }
+# Reset cursor when leaving nvim
+function nvim
+{
+    & "C:\Users\Ricky\scoop\shims\nvim.exe" $args && Write-Output "`e[5 q" 
+}
 
 # Aliases
 Set-Alias -Name ~ -Value Set-LocationHome
