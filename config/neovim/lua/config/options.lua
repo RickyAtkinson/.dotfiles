@@ -26,6 +26,7 @@ vim.opt.guicursor = "n-v-c:block,i-ci-ve:ver25,"
 
 -- Fix "cursor switched to block after exit" bug in PowerShell:
 -- Reset cursor shape to flashing vertical bar when exiting
+-- TODO: This isn't working anymore...
 if _G.IS_WINDOWS then
   vim.cmd("autocmd VimLeave * set guicursor=a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor")
 end
