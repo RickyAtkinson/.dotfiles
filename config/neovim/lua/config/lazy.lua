@@ -12,6 +12,9 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
+      opts = {
+        colorscheme = "catppuccin",
+      },
     },
     -- Import any extras modules here
     { import = "lazyvim.plugins.extras.linting.eslint" },
