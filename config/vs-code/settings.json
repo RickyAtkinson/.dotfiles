@@ -12,6 +12,7 @@
   "editor.minimap.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "git.inputValidation": true,
   "[go]": {
     "editor.tabSize": 4
   },
