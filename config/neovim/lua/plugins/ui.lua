@@ -103,4 +103,7 @@ return {
       opts.config.header = vim.split(logo, "\n")
     end,
   },
+
+  -- Disable headlines as it causes visual display errors in both the command line and in VS Code
+  { "lukas-reineke/headlines.nvim", enabled = false },
 }
